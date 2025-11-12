@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A.P. Enterprises — Multi Productions & Supplies</title>
+  <meta name="description" content="A.P. Enterprises Multi Productions And Supplies Company Pvt. Ltd — import, export, production, supply and manpower services from Nepal." />
+  <meta name="keywords" content="Nepal, import, export, Nepali products, paper, handicrafts, honey, medical supplies, multi-sector company" />
+  <meta name="author" content="A.P. Enterprises" />
+  <style>
+    :root{
+      --accent1:#06d6a0; /* green */
+      --accent2:#ffd166; /* yellow */
+      --accent3:#4d7cff; /* blue */
+      --bg:#f0f8f5;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.8);
+      --muted:#555;
+      color-scheme: light;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#111}
+    a{color:inherit;text-decoration:none}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:var(--card);box-shadow:0 4px 12px rgba(0,0,0,0.05);position:sticky;top:0;z-index:10}
+    .brand{display:flex;gap:14px;align-items:center}
+    .brand img{height:56px;width:56px;object-fit:contain;border-radius:10px}
+    .brand h1{font-size:18px;margin:0}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{padding:8px 14px;border-radius:12px;font-weight:600;cursor:pointer;border:1px solid rgba(0,0,0,0.1);background:var(--glass);transition:0.2s}
+    .btn.primary{background: linear-gradient(90deg,var(--accent1),var(--accent3));color:#fff;border:none}
+    .btn:hover{opacity:0.85}
+
+    main{max-width:1100px;margin:28px auto;padding:20px}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
+    .card{background:var(--card);padding:22px;border-radius:16px;box-shadow:0 6px 28px rgba(0,0,0,0.08)}
+    .hero h2{margin:0 0 8px;font-size:28px}
+    .hero p.lead{margin:0 0 16px;color:var(--muted)}
+
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:16px}
+    .service{padding:12px;border-radius:12px;background:var(--glass);cursor:pointer;border:1px solid rgba(0,0,0,0.05);transition:transform .18s ease, box-shadow .18s ease}
+    .service:hover{transform:translateY(-6px);box-shadow:0 8px 30px rgba(0,0,0,0.15)}
+    .service .tag{display:inline-block;padding:4px 8px;border-radius:999px;font-weight:700;font-size:12px;background:var(--accent2);color:#111}
+
+    .service-detail{margin-top:16px;padding:14px;border-radius:12px;background:rgba(6,214,160,0.08);border:1px solid rgba(0,0,0,0.05)}
+    .service-detail h4{margin:0 0 8px}
+    .service-detail ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+
+    .team{display:flex;gap:14px;align-items:center;margin-top:12px}
+    .avatar{width:96px;height:96px;border-radius:12px;object-fit:cover;border:3px solid rgba(0,0,0,0.08)}
+    .meta h3{margin:0 0 6px;font-size:16px}
+    .meta p{margin:0;color:var(--muted);font-size:13px}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:16px}
+    .gallery img{width:100%;border-radius:12px;object-fit:cover;transition:transform .2s;cursor:pointer}
+    .gallery img:hover{transform:scale(1.05)}
+
+    @media (max-width:980px){.hero{grid-template-columns:1fr}}
+    @media (max-width:560px){.services-grid{grid-template-columns:1fr}}
+
+    footer{margin:28px auto 60px;max-width:1100px;padding:20px;border-radius:12px;background:var(--card);display:flex;gap:18px;align-items:center;justify-content:space-between;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="aplogo.png" alt="A.P. Enterprises logo" />
+      <div>
+        <h1>A.P. Enterprises</h1>
+        <p>Multi Productions & Supplies Pvt. Ltd — Kathmandu, Nepal</p>
+      </div>
+    </div>
+    <nav>
+      <a class="btn" href="#services">Services</a>
+      <a class="btn" href="#gallery">Gallery</a>
+      <a class="btn" href="#team">Team</a>
+      <a class="btn primary" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="card">
+        <h2>Connecting Nepal to the World</h2>
+        <p class="lead">We import, export, produce, supply goods, and provide manpower across multiple sectors in Nepal.</p>
+
+        <div id="services" class="services">
+          <div class="services-grid" id="servicesGrid"></div>
+          <div class="service-detail" id="serviceDetail">
+            <h4>Select a service to view details</h4>
+            <p>Click any service above to read the description.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>Company Info</h3>
+        <p>Name: A.P. Enterprises Multi Productions And Supplies Pvt. Ltd<br>Address: Kathmandu-32, Kathmandu, Nepal<br>Role: Multi-sector operations</p>
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:+9779847257010">+977 9847257010</a><br>Email: <a href="mailto:info@apcomapny.com">info@apcomapny.com</a></p>
+      </aside>
+    </section>
+
+    <section id="gallery" class="card">
+      <h3>Products Gallery</h3>
+      <div class="gallery">
+        <img src="placeholder1.jpg" alt="Product 1" />
+        <img src="placeholder2.jpg" alt="Product 2" />
+        <img src="placeholder3.jpg" alt="Product 3" />
+        <img src="placeholder4.jpg" alt="Product 4" />
+        <img src="placeholder5.jpg" alt="Product 5" />
+        <img src="placeholder6.jpg" alt="Product 6" />
+      </div>
+    </section>
+
+    <section id="team" class="card">
+      <h3>Team</h3>
+      <div class="team">
+        <img src="pb.JPG" alt="Purushottam Basnet" class="avatar" />
+        <div class="meta">
+          <h3>Purushottam Basnet</h3>
+          <p>Director<br>Email: <a href="mailto:basnetpuru99@gmail.com">basnetpuru99@gmail.com</a><br>Mob: <a href="tel:+9779842957179">+977 9842957179</a></p>
+        </div>
+      </div>
+      <div class="team">
+        <img src="ambir.JPG" alt="Ambir Basnet" class="avatar" />
+        <div class="meta">
+          <h3>Ambir Basnet</h3>
+          <p>Manager<br>Email: <a href="mailto:basnetambir96@gmail.com">basnetambir96@gmail.com</a><br>Mob: <a href="tel:+9779860504996">+977 9860504996</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>Contact Us</h3>
+      <form onsubmit="handleContact(event)">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <select name="service">
+          <option>Import</option>
+          <option>Export</option>
+          <option>Collection</option>
+          <option>Production</option>
+          <option>Supplies</option>
+          <option>Manpower</option>
+        </select>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2025 A.P. Enterprises Multi Productions And Supplies Pvt. Ltd — Kathmandu, Nepal</div>
+  </footer>
+
+  <script>
+    const services = [
+      {id:'Import',title:'Import',tag:'Goods & equipment',bullets:['Electronics, medical equipment, health supplies','Construction materials & machinery','Clothing, beauty products, yarn, agricultural tools']},
+      {id:'Export',title:'Export',tag:'Nepali products',bullets:['Nepali papers, handicrafts, carpets','Honey, tea, coffee, spices','Herbs, oils, candles']},
+      {id:'Collection',title:'Collection',tag:'Sourcing',bullets:['Raw material aggregation','Sorting, quality control, packaging']},
+      {id:'Production',title:'Production',tag:'Manufacturing',bullets:['Nepali paper & fabrics','Oil & candle production','Beekeeping & honey processing']},
+      {id:'Supplies',title:'Supplies',tag:'Project execution',bullets:['Tender-based supplies','Supply chain management']},
+      {id:'Manpower',title:'Manpower',tag:'Skilled workforce',bullets:['Recruit skilled personnel','Short & long-term deployment']}
+    ];
+
+    const grid = document.getElementById('servicesGrid');
+    const detail = document.getElementById('serviceDetail');
+    function makeServiceCard(s){
+      const el = document.createElement('div');
+      el.className='service';
+      el.innerHTML = `<strong>${s.title}</strong><span class="tag">${s.tag}</span>`;
+      el.addEventListener('click',()=>showDetail(s));
+      return el;
+    }
+    function showDetail(s){
+      detail.innerHTML=`<h4>${s.title}</h4><p>${s.tag}</p><ul>${s.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>`;
+    }
+    services.forEach(s=>grid.appendChild(makeServiceCard(s)));
+    showDetail(services[0]);
+
+    function handleContact(e){
+      e.preventDefault();
+      const f=new FormData(e.target);
+      location.href=`mailto:info@apcomapny.com?subject=Contact: ${encodeURIComponent(f.get('service'))}&body=${encodeURIComponent(`Name: ${f.get('name')}\nEmail: ${f.get('email')}\nMessage: ${f.get('message')}`)}`;
+    }
+  </script>
+</body>
+</html>
